@@ -45,7 +45,7 @@ export const useTicTacToe = (size, setSizeChnaged) => {
 
   const calculateWinner = (board) => {
     for (let i = 0; i < WINNING_PATTERNS.length; i++) {
-      const [a, ...rest] = WINNING_PATTERNS[i];
+      const [a] = WINNING_PATTERNS[i];
       if (
         board[a] &&
         WINNING_PATTERNS[i].every((item) => board[item] === board[a])
